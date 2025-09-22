@@ -14,7 +14,7 @@ pacman -Sy --noconfirm git helix tmux zsh lazygit
 sudo -u $USER sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo 'alias hx="helix"' >> /home/$USER/.zshrc
-echo 'COLORTERM=truecolor' >> /home/$USER/.zshrc
+echo 'export COLORTERM=truecolor' >> /home/$USER/.zshrc
 
 git clone https://github.com/janoferenczi/dotfiles /home/$USER/.config/
 

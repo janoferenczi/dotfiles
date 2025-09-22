@@ -15,3 +15,5 @@ sudo -u $USER sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmy
 
 echo 'alias hx="helix"' >> /home/$USER/.zshrc
 git clone https://github.com/janoferenczi/dotfiles /home/$USER/.config/
+
+cp ./.zshrc /home/$USER/.zshrc

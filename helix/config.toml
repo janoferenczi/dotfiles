@@ -1,9 +1,49 @@
-theme = 'catppuccin_mocha'
+theme = "catppuccin_mocha"
 
 [editor]
-line-number = 'relative'
+line-number = "relative"
+end-of-line-diagnostics = "hint"
+idle-timeout = 10
+completion-trigger-len = 1
+soft-wrap.enable = true
 
 [editor.cursor-shape]
-normal = 'block'
-insert = 'bar'
-select = 'underline'
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = false
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = []
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 1
+
+[keys.normal]
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+"A-w" = ":buffer-close"
+
+[keys.normal.space]
+x = ":toggle whitespace.render all none"
